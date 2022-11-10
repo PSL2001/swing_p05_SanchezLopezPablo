@@ -5,26 +5,36 @@
  */
 package ejercicio1;
 
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Container;
 import java.awt.HeadlessException;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 import javax.swing.JFrame;
 
 
 /**
- * @author usuario
+ * The Class Ventana.
  *
+ * @author usuario
  */
 public class Ventana extends JFrame {
-
+	
 	/**
-	 * @param title
-	 * @throws HeadlessException
+	 * Crea una nueva ventana.
+	 *
+	 * @param el titulo de la ventana
+	 * 
 	 */
 	public Ventana(String title) {
 		super(title);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.setBounds(300,300,500,350);
-		this.addWindowListener(new EscuchaEvento());
+		
+		this.setVisible(true);
 	}
+	
 	
 }
