@@ -10,6 +10,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  * @author usuario
@@ -31,8 +32,14 @@ public class Ventana extends JFrame implements MouseListener {
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println(e.getButton());
-        // MouseEvent.BUTTON3 es el boton derecho
+		int boton = e.getButton();
+        // MouseEvent.BUTTON3 es el boton derecho, mientras que 1 es el izquierdo
+		if (boton == 1) {
+			JOptionPane.showMessageDialog(this, "Has pulsado el boton izquierdo");
+		} else if(boton == 3) {
+			JOptionPane.showMessageDialog(this, "Has pulsado el boton derecho");
+		}
+		
 		
 	}
 
